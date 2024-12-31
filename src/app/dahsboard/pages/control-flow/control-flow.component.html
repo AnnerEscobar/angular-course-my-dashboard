@@ -42,7 +42,7 @@
   <div class="bg-white rounded shadow p-">
 
     <ul>
-      @for (framework of frameworks(); track frameworks; let i = $index, count = $count, first = $first, last = $last,
+      @for (framework of frameworks(); track $index; let i = $index, count = $count, first = $first, last = $last,
       even = $even, odd = $odd) {
       <li [class]="{
       'bg-red-100': even && !first && !last,
