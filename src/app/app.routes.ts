@@ -48,6 +48,16 @@ export const routes: Routes = [
         loadComponent: () => import('./dahsboard/pages/view-transition/view-transition1.component'),
       },
       {
+        path: 'inputs-outputs',
+        title: 'Inputs Outputs',
+        loadComponent: () => import('./dahsboard/pages/input-output/input-output.component'),
+      },
+      {
+        path: 'material',
+        title: 'Angular Material',
+        loadComponent: () => import('./dahsboard/pages/material/material.component'),
+      },
+      {
         path: '', redirectTo: 'control-flow', pathMatch: 'full'
       }
     ]
