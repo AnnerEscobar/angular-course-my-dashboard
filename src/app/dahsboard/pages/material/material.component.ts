@@ -1,18 +1,25 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {MatSlideToggleModule} from '@angular/material/slide-toggle';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import {
+  MatBottomSheet,
+  MatBottomSheetModule,
+  MatBottomSheetRef,
+} from '@angular/material/bottom-sheet';
+import { OptionsBottomSheetComponent } from './ui/options-bottom-sheet/options-bottom-sheet.component';
 
 @Component({
   selector: 'app-material',
   imports:
-  [
-    MatSlideToggleModule,
-    MatIconModule,
-    MatButtonModule,
-    MatBadgeModule
-  ],
+    [
+      MatSlideToggleModule,
+      MatIconModule,
+      MatButtonModule,
+      MatBadgeModule,
+      MatBottomSheetModule,
+    ],
 
   templateUrl: './material.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,6 +27,14 @@ import {MatBadgeModule} from '@angular/material/badge';
 export default class MaterialComponent {
 
 
+  constructor(private bottomSheet: MatBottomSheet) {
+
+  }
+
+  openBottomSheet(): void {
+    console.log('openBottomSheet');
+    this.bottomSheet.open(OptionsBottomSheetComponent);
+  }
 
 
- }
+}
