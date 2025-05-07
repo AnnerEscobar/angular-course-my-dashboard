@@ -3,7 +3,10 @@ import { TitleComponent } from "../../../shared/title/title.component";
 import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [TitleComponent, CommonModule],
+  imports: [
+    TitleComponent,
+    CommonModule
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
 <div>
